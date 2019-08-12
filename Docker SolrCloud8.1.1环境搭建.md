@@ -107,6 +107,7 @@ chown -R 8983:8983 /home/solrcloud/
 docker run -d \
     --name caas-solrcloud_1 \
     --restart=always \
+    --log-opt max-size=10m --log-opt max-file=3 \
     -v /etc/localtime:/etc/localtime \
     -v /home/solrcloud/solrhome_1:/opt/solrhome -e SOLR_HOME=/opt/solrhome \
     -v /home/solrcloud/solrhome_1/logs:/var/solr/logs \
@@ -120,6 +121,7 @@ docker run -d \
 docker run -d \
     --name caas-solrcloud_2 \
     --restart=always \
+    --log-opt max-size=10m --log-opt max-file=3 \
     -v /etc/localtime:/etc/localtime \
     -v /home/solrcloud/solrhome_2:/opt/solrhome -e SOLR_HOME=/opt/solrhome \
     -v /home/solrcloud/solrhome_2/logs:/var/solr/logs \
@@ -132,6 +134,7 @@ docker run -d \
 docker run -d\
     --name caas-solrcloud_3 \
     --restart=always \
+    --log-opt max-size=10m --log-opt max-file=3 \
     -v /etc/localtime:/etc/localtime \
     -v /home/solrcloud/solrhome_3:/opt/solrhome -e SOLR_HOME=/opt/solrhome \
     -v /home/solrcloud/solrhome_3/logs:/var/solr/logs \
@@ -144,6 +147,7 @@ docker run -d\
 docker run -d \
     --name caas-solrcloud_4 \
     --restart=always \
+    --log-opt max-size=10m --log-opt max-file=3 \
     -v /etc/localtime:/etc/localtime \
     -v /home/solrcloud/solrhome_4:/opt/solrhome -e SOLR_HOME=/opt/solrhome \
     -v /home/solrcloud/solrhome_4/logs:/var/solr/logs \
@@ -157,6 +161,7 @@ docker run -d \
 docker run -d\
     --name caas-solrcloud_5 \
     --restart=always \
+    --log-opt max-size=10m --log-opt max-file=3 \
     -v /etc/localtime:/etc/localtime \
     -v /home/solrcloud/solrhome_5:/opt/solrhome -e SOLR_HOME=/opt/solrhome \
     -v /home/solrcloud/solrhome_5/logs:/var/solr/logs \
@@ -169,6 +174,7 @@ docker run -d\
 docker run -d \
     --name caas-solrcloud_6 \
     --restart=always \
+    --log-opt max-size=10m --log-opt max-file=3 \
     -v /etc/localtime:/etc/localtime \
     -v /home/solrcloud/solrhome_6:/opt/solrhome -e SOLR_HOME=/opt/solrhome \
     -v /home/solrcloud/solrhome_6/logs:/var/solr/logs \
