@@ -115,7 +115,7 @@ docker run -d \
     -v /home/solrcloud/config/ik/classes:/opt/solr/server/solr-webapp/webapp/WEB-INF/classes \
     --privileged=true \
     -p 8983:8983 \
-    solr bash -c '/opt/solr/bin/solr start -m 30g -f -z 10.200.36.90:2181,10.200.36.91:2181,10.200.36.25:2181'
+    solr bash -c '/opt/solr/bin/solr start -m 28g -f -z 10.200.36.90:2181,10.200.36.91:2181,10.200.36.25:2181'
 
 
 docker run -d \
@@ -129,7 +129,7 @@ docker run -d \
     -v /home/solrcloud/config/ik/classes:/opt/solr/server/solr-webapp/webapp/WEB-INF/classes \
     --privileged=true \
     -p 8984:8983 \
-    solr bash -c '/opt/solr/bin/solr start -m 30g -f -z 10.200.36.90:2181,10.200.36.91:2181,10.200.36.25:2181'
+    solr bash -c '/opt/solr/bin/solr start -m 28g -f -z 10.200.36.90:2181,10.200.36.91:2181,10.200.36.25:2181'
 
 docker run -d\
     --name caas-solrcloud_3 \
@@ -142,7 +142,7 @@ docker run -d\
     -v /home/solrcloud/config/ik/classes:/opt/solr/server/solr-webapp/webapp/WEB-INF/classes \
     --privileged=true \
     -p 8983:8983 \
-    solr bash -c '/opt/solr/bin/solr start -m 30g -f -z 10.200.36.90:2181,10.200.36.91:2181,10.200.36.25:2181'
+    solr bash -c '/opt/solr/bin/solr start -m 28g -f -z 10.200.36.90:2181,10.200.36.91:2181,10.200.36.25:2181'
 
 docker run -d \
     --name caas-solrcloud_4 \
@@ -155,7 +155,7 @@ docker run -d \
     -v /home/solrcloud/config/ik/classes:/opt/solr/server/solr-webapp/webapp/WEB-INF/classes \
     --privileged=true \
     -p 8984:8983 \
-    solr bash -c '/opt/solr/bin/solr start -m 30g -f -z 10.200.36.90:2181,10.200.36.91:2181,10.200.36.25:2181'
+    solr bash -c '/opt/solr/bin/solr start -m 28g -f -z 10.200.36.90:2181,10.200.36.91:2181,10.200.36.25:2181'
     
     
 docker run -d\
@@ -169,7 +169,7 @@ docker run -d\
     -v /home/solrcloud/config/ik/classes:/opt/solr/server/solr-webapp/webapp/WEB-INF/classes \
     --privileged=true \
     -p 8983:8983 \
-    solr bash -c '/opt/solr/bin/solr start -m 30g -f -z 10.200.36.90:2181,10.200.36.91:2181,10.200.36.25:2181'
+    solr bash -c '/opt/solr/bin/solr start -m 28g -f -z 10.200.36.90:2181,10.200.36.91:2181,10.200.36.25:2181'
 
 docker run -d \
     --name caas-solrcloud_6 \
@@ -182,7 +182,7 @@ docker run -d \
     -v /home/solrcloud/config/ik/classes:/opt/solr/server/solr-webapp/webapp/WEB-INF/classes \
     --privileged=true \
     -p 8984:8983 \
-    solr bash -c '/opt/solr/bin/solr start -m 30g -f -z 10.200.36.90:2181,10.200.36.91:2181,10.200.36.25:2181'
+    solr bash -c '/opt/solr/bin/solr start -m 28g -f -z 10.200.36.90:2181,10.200.36.91:2181,10.200.36.25:2181'
 
 ```
 修改solr内存配置
