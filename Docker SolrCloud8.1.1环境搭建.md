@@ -183,6 +183,20 @@ docker run -d \
     --privileged=true \
     -p 8984:8983 \
     solr bash -c '/opt/solr/bin/solr start -m 28g -f -z 10.200.36.90:2181,10.200.36.91:2181,10.200.36.25:2181'
+    
+    
+docker run -d \
+    --name caas-solrcloud \
+    --restart=always \
+    --log-opt max-size=10m --log-opt max-file=3 \
+    -v /etc/localtime:/etc/localtime \
+    -v /home/solrcloud/solrhome:/opt/solrhome -e SOLR_HOME=/opt/solrhome \
+    -v /home/solrcloud/solrhome/logs:/var/solr/logs \
+    -v /home/solrcloud/config:/opt/solrcloud/config \
+    -v /home/solrcloud/config/ik/classes:/opt/solr/server/solr-webapp/webapp/WEB-INF/classes \
+    --privileged=true \
+    -p 8983:8983 \
+    solr bash -c '/opt/solr/bin/solr start -m 110g -f -z 10.200.36.90:2181,10.200.36.91:2181,10.200.36.25:2181'
 
 ```
 修改solr内存配置
